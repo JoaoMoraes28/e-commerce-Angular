@@ -1,0 +1,265 @@
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.89);
+    backdrop-filter: blur(2px);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    z-index: 30;
+}
+
+nav img {
+    width: auto;
+    height: 40px;
+}
+
+nav ul {
+    display: none;
+}
+
+.container-nav-mob {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 150px;
+}
+
+.fa-search {
+    color: var(--color-icons);
+}
+
+.fa-shopping-bag {
+    color: var(--color-icons);
+}
+
+.close-one {
+    width: 15px;
+    height: 1px;
+    margin-bottom: 5px;
+    transition: 0.3s ease-in-out;
+    background-color: var(--color-icons);
+    transition: 1s ease-in-out;
+}
+
+.close-two {
+    width: 15px;
+    height: 1px;
+    transition: 0.3s ease-in-out;
+    background-color: var(--color-icons);
+    transition: 1s ease-in-out;
+}
+
+.close-rotate-one {
+    transform: rotate(45deg);
+}
+
+.close-rotate-two {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+main {
+    padding-top: 55px;
+
+}
+
+section div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 2px;
+}
+
+.button-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    color: white;
+    background-color: var(--color-blue-buttom);
+    font-size: 14px;
+}
+
+.phone-ad .button-buy {
+    width: 140px;
+}
+
+.button-buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    color: var(--color-blue-buttom);
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--color-blue-buttom);
+}
+
+.phone-ad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    padding-top: 40px;
+    background-color: red;
+}
+
+.pad-ad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    padding-top: 40px;
+    margin-top: 10px;
+    background-color: orange;
+}
+
+.pad-ad span {
+    font-family: "Lobster Two", sans-serif;
+    color: var(--color-blue-buttom);
+}
+
+.book-ad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    padding-top: 40px;
+    margin-top: 10px;
+    background-color: lawngreen;
+}
+
+.watch-ad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    padding-top: 40px;
+    margin-top: 10px;
+    background-color: purple;
+}
+
+.container-carousel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 470px;
+    margin-top: 10px;
+    overflow: hidden;
+    background-color: red;
+}
+
+.container-sets {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    top: 40%;
+    padding: 0px 30px;
+}
+
+.container-sets span {
+    transform: scale(2);
+    color: black;
+    z-index: 90;
+}
+
+.container-animation {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 430px;
+    gap: 20px;
+    background-color: purple;
+}
+
+.ad-carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    min-width: 300px;
+    height: 420px;
+    color: white;
+    padding-bottom: 30px;
+    background-color: tomato;
+    background-size: cover;
+    background-position: center;
+}
+
+/* @keyframes slide {
+    40% {
+        transform: translateX(40px);
+    }
+    100% {
+        transform: translateX(320px);
+    }
+} */
+
+.title-ad {
+    font-weight: 600;
+}
+
+.description-ad {
+    width: 100%;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.button-ad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 35px;
+    margin-top: 10px;
+    color: black;
+    background-color: white;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.37);
+}
+
+.location-ad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: orange;
+    height: 30px;
+    gap: 5px;
+}
+
+.icon-location {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.452);
+}
