@@ -6,6 +6,7 @@ header {
     height: 45px;
     background-color: rgba(255, 255, 255, 0.89);
     backdrop-filter: blur(2px);
+    z-index: 90;
 }
 
 nav {
@@ -58,11 +59,11 @@ nav ul {
 }
 
 .close-rotate-one {
-    transform: rotate(45deg);
+    transform: translateY(3px) rotate(45deg);
 }
 
 .close-rotate-two {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-3px) rotate(-45deg);
 }
 
 main {
@@ -117,9 +118,12 @@ h2 {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 400px;
+    height: 490px;
     padding-top: 40px;
-    background-color: red;
+    background-image: url(/images/phone-ad.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .pad-ad {
@@ -127,10 +131,13 @@ h2 {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 400px;
+    height: 580px;
     padding-top: 40px;
     margin-top: 10px;
-    background-color: orange;
+    background-image: url(/images/pad-ad.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .pad-ad span {
@@ -143,10 +150,14 @@ h2 {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 400px;
+    height: 520px;
     padding-top: 40px;
     margin-top: 10px;
-    background-color: lawngreen;
+    color: white;
+    background-image: url(/images/book-ad.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .watch-ad {
@@ -154,22 +165,33 @@ h2 {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 400px;
+    height: 420px;
     padding-top: 40px;
     margin-top: 10px;
-    background-color: purple;
+    background-image: url(/images/watch-ad.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .container-carousel {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 100%;
-    height: 470px;
-    margin-top: 10px;
+    height: 500px;
+    margin-top: 20px;
     overflow: hidden;
-    background-color: red;
+    background: #FFFFFF;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(212, 212, 212, 1) 50%, rgba(255, 255, 255, 1) 100%);
+}
+
+.container-carousel h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
 }
 
 .container-sets {
@@ -179,7 +201,7 @@ h2 {
     justify-content: space-between;
     width: 100%;
     margin: 0;
-    top: 40%;
+    top: 48%;
     padding: 0px 30px;
 }
 
@@ -191,11 +213,11 @@ h2 {
 
 .container-animation {
     display: flex;
-    justify-content: center;
-    width: 100%;
+    padding-left: 57px;
+    width: 500%;
     height: 430px;
     gap: 20px;
-    background-color: purple;
+    /* animation: slide 1.5s ease-in-out 0.2s forwards; */
 }
 
 .ad-carousel {
@@ -203,23 +225,64 @@ h2 {
     flex-direction: column;
     justify-content: end;
     align-items: center;
-    min-width: 300px;
+    width: 300px;
     height: 420px;
     color: white;
     padding-bottom: 30px;
-    background-color: tomato;
-    background-size: cover;
-    background-position: center;
+    box-shadow: 2px 4px 12px 1px rgba(0, 0, 0, 0.76);
 }
 
-/* @keyframes slide {
+.romance {
+    color: black;
+    background-image: url(/images/romance-ad.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.terror {
+    background-image: url(/images/terror-ad.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.comedy {
+    background-image: url(/images/comedy-ad.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.action {
+    background-image: url(/images/action-ad.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.drama {
+    background-image: url(/images/drama-ad.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.suspense {
+    background-image: url(/images/suspense-ad.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@keyframes slide {
     40% {
-        transform: translateX(40px);
+        transform: translateX(-40px);
     }
     100% {
-        transform: translateX(320px);
+        transform: translateX(-320px);
     }
-} */
+}
 
 .title-ad {
     font-weight: 600;
@@ -252,7 +315,6 @@ h2 {
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: orange;
     height: 30px;
     gap: 5px;
 }
@@ -262,4 +324,34 @@ h2 {
     height: 10px;
     border-radius: 100%;
     background-color: rgba(0, 0, 0, 0.452);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 400px;
+    padding: 20px;
+    gap: 10px;
+    color: var(--color-icons);
+    font-size: 14px;
+    text-align: justify;
+}
+
+.promotions-warning {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    gap: 5px;
+}
+
+.address {
+    width: 100%;
+    height: 70px;
+}
+
+footer span:nth-child(4) {
+    margin-top: 20px;
+    text-align: center;
 }
