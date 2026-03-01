@@ -1,23 +1,25 @@
 <header>
   <nav>
     <img src="images/log-main.png" alt="">
-    <ul>
-      <li>Loja</li>
-      <li>Phone</li>
-      <li>Pad</li>
-      <li>Watch</li>
-      <li>TV e Casa</li>
-      <li>Entretenimento</li>
-      <li>Acessórios</li>
-      <li>Suporte</li>
-    </ul>
+    <div [class.show-list]="modalClose.shoList" class="container-ul">
+      <ul [class.show-ul]="modalClose.shoList" class="nav-ul">
+        <li>Loja</li>
+        <li>Phone</li>
+        <li>Pad</li>
+        <li>Watch</li>
+        <li>TV e Casa</li>
+        <li>Entretenimento</li>
+        <li>Acessórios</li>
+        <li>Suporte</li>
+      </ul>
+    </div>
   </nav>
   <div class="container-nav-mob">
     <span class="fas fa-search"></span>
     <span class="fa fa-shopping-bag"></span>
-    <div class="menu-mobile">
-      <div class="close-one"></div>
-      <div class="close-two"></div>
+    <div (click)="changeListNav()" class="menu-mobile">
+      <div [class.close-rotate-one]="modalClose.closeOne" class="close-one"></div>
+      <div [class.close-rotate-two]="modalClose.closeTwo" class="close-two"></div>
     </div>
   </div>
 </header>
@@ -64,42 +66,42 @@
   <div class="container-carousel">
     <h2>Phone TV</h2>
     <div class="container-sets">
-      <span class="fas fa-chevron-left"></span>
-      <span class="fas fa-chevron-right"></span>
+      <span (click)="changeCarouselLeft()" class="fas fa-chevron-left"></span>
+      <span (click)="changeCarouselRight()" class="fas fa-chevron-right"></span>
     </div>
 
-    <div class="container-animation">
-      <div class="ad-carousel romance">
+    <div [style.transform]="animation" class="container-animation">
+      <div [class.no-focus-ad]="listAd[0]" class="ad-carousel romance">
         <p class="title-ad">Romance</p>
         <p class="description-ad">Você acredita no amor as cegas?</p>
         <a class="button-ad" href="">Assita agora</a>
       </div>
 
-      <div class="ad-carousel terror">
+      <div [class.no-focus-ad]="listAd[1]" class="ad-carousel terror">
         <p class="title-ad">Terror</p>
         <p class="description-ad">Será que alguém está a espreita? Ou algo...</p>
         <a class="button-ad" href="">Assita agora</a>
       </div>
 
-      <div class="ad-carousel comedy">
+      <div [class.no-focus-ad]="listAd[2]" class="ad-carousel comedy">
         <p class="title-ad">Comédia</p>
         <p class="description-ad">A terapia agora é em dobro.</p>
         <a class="button-ad" href="">Assita agora</a>
       </div>
 
-      <div class="ad-carousel action">
+      <div [class.no-focus-ad]="listAd[3]" class="ad-carousel action">
         <p class="title-ad">Ação</p>
         <p class="description-ad">A lenda volta a vigiar as ruas escuras de sua cidade.</p>
         <a class="button-ad" href="">Assita agora</a>
       </div>
 
-      <div class="ad-carousel drama">
+      <div [class.no-focus-ad]="listAd[4]" class="ad-carousel drama">
         <p class="title-ad">Drama</p>
         <p class="description-ad">Uma lealdade quase impossível.</p>
         <a class="button-ad" href="">Assita agora</a>
       </div>
 
-      <div class="ad-carousel suspense">
+      <div [class.no-focus-ad]="listAd[5]" class="ad-carousel suspense">
         <p class="title-ad">Suspense</p>
         <p class="description-ad">Acredita mesmo no que está vendo, ou ainda não acordou?.</p>
         <a class="button-ad" href="">Assita agora</a>
@@ -120,14 +122,18 @@
 
 <footer>
   <div class="promotions-warning">
-    <p>* Oferta válida para comprar de produtos Phone realizadas entre 28 de jandeiro a 20 de abril em uma Phone Store, no site oficial.</p>
-    <p>As ofertas estão sujeitas a disponiblidade enquanto durarem os estoques, sendo que cada Comprador Elegível pode adquirir um Produto Elegível.</p>
+    <p>* Oferta válida para comprar de produtos Phone realizadas entre 28 de jandeiro a 20 de abril em uma Phone Store,
+      no site oficial.</p>
+    <p>As ofertas estão sujeitas a disponiblidade enquanto durarem os estoques, sendo que cada Comprador Elegível pode
+      adquirir um Produto Elegível.</p>
     <p>É preciso ter uma assinatura no Phone TV.</p>
-    <p>Os recursos estão sujeitos a mudanças. Alguns serviçõs podem não estar disponíveis em todas as regiões ou idiomas.</p>
+    <p>Os recursos estão sujeitos a mudanças. Alguns serviçõs podem não estar disponíveis em todas as regiões ou
+      idiomas.</p>
   </div>
 
   <div class="address">
-    <p>Outras formas de comprar: encontre uma loja física da Phone Store ou revendedor em sua região. Ou ligue para 0800-4772-8922. Rua Fronteira Tomato Jr, 190, 21° andar. São Paulo, SP. CEP: 01209-212</p>
+    <p>Outras formas de comprar: encontre uma loja física da Phone Store ou revendedor em sua região. Ou ligue para
+      0800-4772-8922. Rua Fronteira Tomato Jr, 190, 21° andar. São Paulo, SP. CEP: 01209-212</p>
   </div>
 
   <span>Brasil</span>

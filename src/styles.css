@@ -22,6 +22,10 @@ body {
     height: 100%;
 }
 
+.remove-scrool {
+    overflow: hidden;
+}
+
 :root {
     --color-icons: #a5a5a5;
     --color-blue-buttom: #0071e3;
