@@ -222,19 +222,32 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 500px;
+    height: 540px;
     margin-top: 20px;
     overflow: hidden;
     background: #FFFFFF;
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(212, 212, 212, 1) 50%, rgba(255, 255, 255, 1) 100%);
 }
 
-.container-carousel h2 {
+.container-h2-tv {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
     width: 100%;
+    height: 70px;
+}
+
+.container-h2-tv div {
+    display: flex;
+    align-items: center;
+    width: 190px;
+    gap: 5px;
+}
+
+.container-h2-tv img {
+    width: auto;
+    height: 50px;
+    opacity: 0.7;
 }
 
 .container-sets {
@@ -244,7 +257,7 @@ h2 {
     justify-content: space-between;
     width: 100%;
     margin: 0;
-    top: 48%;
+    top: 49%;
     padding: 0px 30px;
 }
 
@@ -256,10 +269,11 @@ h2 {
 
 .container-animation {
     display: flex;
-    padding-left: 57px;
-    width: 500%;
+    justify-content: start;
+    width: 600dvw;
     height: 430px;
     gap: 20px;
+    transform: translateX(-320px);
     transition: 0.7s ease-in-out;
 }
 
@@ -268,11 +282,11 @@ h2 {
     flex-direction: column;
     justify-content: end;
     align-items: center;
-    width: 300px;
+    min-width: 300px;
     height: 420px;
     color: white;
-    padding-bottom: 30px;
     box-shadow: 2px 4px 12px 1px rgba(0, 0, 0, 0.76);
+    overflow: hidden;
     transition: 0.5s ease-in-out;
 }
 
@@ -323,6 +337,23 @@ h2 {
     background-repeat: no-repeat;
 }
 
+.container-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.438) 0%, rgba(255, 255, 255, 0) 100%);
+    transform: translateY(0px);
+    transition: 0.6s ease-in-out;
+}
+
+.show-container-data {
+    transform: translateY(150px);
+}
+
 .title-ad {
     font-weight: 600;
 }
@@ -354,15 +385,20 @@ h2 {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 30px;
-    gap: 5px;
+    height: 40px;
+    gap: 7px;
 }
 
 .icon-location {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 100%;
-    background-color: rgba(0, 0, 0, 0.452);
+    background-color: black;
+    transition: 0.6s ease-in-out;
+}
+
+.disable-icon-location {
+    opacity: 0.5;
 }
 
 footer {
@@ -372,6 +408,7 @@ footer {
     height: 400px;
     padding: 20px;
     gap: 10px;
+    background-color: var(--color-footer);
     color: var(--color-icons);
     font-size: 14px;
     text-align: justify;
@@ -393,4 +430,44 @@ footer {
 footer span:nth-child(4) {
     margin-top: 20px;
     text-align: center;
+}
+
+@media (min-width: 768px) {
+    .container-ads {
+        display: flex;
+        width: 100%;
+        padding: 5px 10px;
+        gap: 10px;
+    }
+
+    .phone-ad {
+        height: 600px;
+    }
+
+    .pad-ad {
+        height: 600px;
+    }
+
+    .watch-ad {
+        width: calc(50% - 5px);
+        height: 450px;
+    }
+
+    .book-ad {
+        width: calc(50% - 5px);
+        height: 450px;
+    }
+
+    .ad-carousel {
+        min-width: 600px;
+    }
+
+    .romance {
+        background-image: url(/images/romance-table.png);
+    }
+
+    .terror {
+        background-position: 0px -190px;
+        background-image: url(/images/terror-tablet.png);
+    }
 }

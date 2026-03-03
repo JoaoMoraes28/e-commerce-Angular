@@ -63,58 +63,75 @@
     </section>
   </div>
 
-  <div class="container-carousel">
-    <h2>Phone TV</h2>
+  <div #containerCarousel class="container-carousel">
+    <div class="container-h2-tv">
+      <div>
+        <img src="/images/log-main.png" alt="">
+        <h2>Phone TV</h2>
+      </div>
+    </div>
     <div class="container-sets">
       <span (click)="changeCarouselLeft()" class="fas fa-chevron-left"></span>
       <span (click)="changeCarouselRight()" class="fas fa-chevron-right"></span>
     </div>
 
-    <div [style.transform]="animation" class="container-animation">
+    <div [style.transform]="" class="container-animation">
       <div [class.no-focus-ad]="listAd[0]" class="ad-carousel romance">
-        <p class="title-ad">Romance</p>
-        <p class="description-ad">Você acredita no amor as cegas?</p>
-        <a class="button-ad" href="">Assita agora</a>
+        <div [class.show-container-data]="listAd[0]" class="container-data">
+          <p class="title-ad">Romance</p>
+          <p class="description-ad">Você acredita no amor as cegas?</p>
+          <a class="button-ad" href="">Assita agora</a>
+        </div>
       </div>
 
       <div [class.no-focus-ad]="listAd[1]" class="ad-carousel terror">
-        <p class="title-ad">Terror</p>
-        <p class="description-ad">Será que alguém está a espreita? Ou algo...</p>
-        <a class="button-ad" href="">Assita agora</a>
+        <div [class.show-container-data]="listAd[1]" class="container-data">
+          <p class="title-ad">Terror</p>
+          <p class="description-ad">Será que alguém está a espreita? Ou algo...</p>
+          <a class="button-ad" href="">Assita agora</a>
+        </div>
       </div>
 
       <div [class.no-focus-ad]="listAd[2]" class="ad-carousel comedy">
-        <p class="title-ad">Comédia</p>
-        <p class="description-ad">A terapia agora é em dobro.</p>
-        <a class="button-ad" href="">Assita agora</a>
+        <div [class.show-container-data]="listAd[2]" class="container-data">
+          <p class="title-ad">Comédia</p>
+          <p class="description-ad">A terapia agora é em dobro.</p>
+          <a class="button-ad" href="">Assita agora</a>
+        </div>
       </div>
 
       <div [class.no-focus-ad]="listAd[3]" class="ad-carousel action">
-        <p class="title-ad">Ação</p>
-        <p class="description-ad">A lenda volta a vigiar as ruas escuras de sua cidade.</p>
-        <a class="button-ad" href="">Assita agora</a>
+        <div [class.show-container-data]="listAd[3]" class="container-data">
+          <p class="title-ad">Ação</p>
+          <p class="description-ad">A lenda volta a vigiar as ruas escuras de sua cidade.</p>
+          <a class="button-ad" href="">Assita agora</a>
+        </div>
       </div>
 
       <div [class.no-focus-ad]="listAd[4]" class="ad-carousel drama">
-        <p class="title-ad">Drama</p>
-        <p class="description-ad">Uma lealdade quase impossível.</p>
-        <a class="button-ad" href="">Assita agora</a>
+        <div [class.show-container-data]="listAd[4]" class="container-data">
+          <p class="title-ad">Drama</p>
+          <p class="description-ad">Uma lealdade quase impossível.</p>
+          <a class="button-ad" href="">Assita agora</a>
+        </div>
       </div>
 
       <div [class.no-focus-ad]="listAd[5]" class="ad-carousel suspense">
-        <p class="title-ad">Suspense</p>
-        <p class="description-ad">Acredita mesmo no que está vendo, ou ainda não acordou?.</p>
-        <a class="button-ad" href="">Assita agora</a>
+        <div [class.show-container-data]="listAd[5]" class="container-data">
+          <p class="title-ad">Suspense</p>
+          <p class="description-ad">Acredita mesmo no que está vendo, ou ainda não acordou?.</p>
+          <a class="button-ad" href="">Assita agora</a>
+        </div>
       </div>
     </div>
 
     <div class="location-ad">
-      <div class="icon-location"></div>
-      <div class="icon-location"></div>
-      <div class="icon-location"></div>
-      <div class="icon-location"></div>
-      <div class="icon-location"></div>
-      <div class="icon-location"></div>
+      <div [class.disable-icon-location]="listAd[0]" class="icon-location"></div>
+      <div [class.disable-icon-location]="listAd[1]" class="icon-location"></div>
+      <div [class.disable-icon-location]="listAd[2]" class="icon-location"></div>
+      <div [class.disable-icon-location]="listAd[3]" class="icon-location"></div>
+      <div [class.disable-icon-location]="listAd[4]" class="icon-location"></div>
+      <div [class.disable-icon-location]="listAd[5]" class="icon-location"></div>
     </div>
   </div>
 
@@ -122,7 +139,7 @@
 
 <footer>
   <div class="promotions-warning">
-    <p>* Oferta válida para comprar de produtos Phone realizadas entre 28 de jandeiro a 20 de abril em uma Phone Store,
+    <p>* Oferta válida para comprar de produtos Phone realizadas entre 28 de Fevereiro a 20 de Abril em uma Phone Store,
       no site oficial.</p>
     <p>As ofertas estão sujeitas a disponiblidade enquanto durarem os estoques, sendo que cada Comprador Elegível pode
       adquirir um Produto Elegível.</p>
