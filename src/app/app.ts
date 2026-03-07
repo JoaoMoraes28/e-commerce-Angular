@@ -18,17 +18,16 @@ export class App {
   ) { }
 
   @ViewChild('containerCarousel') public carousel!: ElementRef;
+  @ViewChild('containerAnimation') public containerAnimation!: ElementRef;
+  @ViewChild('card') public cardAd!: ElementRef;
   private resizeObserver!: ResizeObserver;
   private widthScreen!: number;
-  private countAnimation: number = 0;
-  private numberAnimationFixed: number = 1550
-  private numberAnimation!: number;
-  public animation: string = `translateX(1550px)`;
+  private positionCard: number = 0;
   public modalClose = {
     closeOne: false,
     closeTwo: false,
-    shoList: false
-  }
+    showList: false
+  };
   public listAd = [
     false,
     true,
@@ -36,90 +35,125 @@ export class App {
     true,
     true,
     true,
-  ]
+  ];
 
   ngOnInit(): void {
     this.resizeObserver = new ResizeObserver(entries => {
       for (const entry of entries) {
         this.widthScreen = entry.contentRect.width;
       }
-
-      if (this.widthScreen < 768) {
-        console.log('Mobile')
-        this.animation = 'translateX(800px)'
-
-      } else if (this.widthScreen >= 768 && this.widthScreen < 1280) {
-        console.log('Tablet')
-        this.animation = 'translate(1550px)'
-
-      } else {
-        alert('é Desktop Animal!!')
-
-      }
     });
-  }
+  };
 
   ngAfterViewInit(): void {
-    this.resizeObserver.observe(this.carousel.nativeElement)
-  }
+    this.resizeObserver.observe(this.carousel.nativeElement);
+  };
 
   changeListNav() {
     if (this.modalClose.closeOne == false) {
-      this.modalClose = { closeOne: true, closeTwo: true, shoList: true }
-      this.renderer.addClass(this.document.body, 'remove-scrool')
+      this.modalClose = { closeOne: true, closeTwo: true, showList: true };
+      this.renderer.addClass(this.document.body, 'remove-scrool');
 
     } else {
-      this.modalClose = { closeOne: false, closeTwo: false, shoList: false }
-      this.renderer.removeClass(this.document.body, 'remove-scrool')
+      this.modalClose = { closeOne: false, closeTwo: false, showList: false };
+      this.renderer.removeClass(this.document.body, 'remove-scrool');
 
-    }
+    };
 
-  }
+  };
 
-  changeCarouselRight() {
-    // if (this.countAnimation < 5) {
-    //   this.calculateTranlateCarousel()
-    //   this.numberAnimationFixed -= this.numberAnimation;
-    //   this.animation = `translateX(${this.numberAnimationFixed}px)`;
-    //   this.countAnimation++
+  nextCard(direction: 'left' | 'right') {
+    const container = this.containerAnimation.nativeElement;
+    let cardWidth = this.cardAd.nativeElement.offsetWidth;
 
-    //   this.listAd[this.countAnimation - 1] = true;
-    //   this.listAd[this.countAnimation] = false;
-    // }
-  }
 
-  changeCarouselLeft() {
-    // if (this.countAnimation != 0) {
-    //   this.calculateTranlateCarousel()
-    //   this.numberAnimationFixed += this.numberAnimation
+    if (direction === 'left' && this.positionCard > 0) {
+      cardWidth = cardWidth * -1;
 
-    //   this.animation = `translateX(${this.numberAnimationFixed}px)`;
-    //   this.countAnimation--
+      this.positionCard--;
+      this.listAd[this.positionCard + 1] = true;
 
-    //   this.listAd[this.countAnimation + 1] = true;
-    //   this.listAd[this.countAnimation] = false;
+    } else if (direction === 'right' && this.positionCard < 5) {
 
-    // }
-
-  }
-
-  calculateTranlateCarousel() {
-    if (this.widthScreen < 768) {
-      console.log('Mobile')
-      this.numberAnimation = 320
-
-    } else if (this.widthScreen >= 768 && this.widthScreen < 1280) {
-      console.log('Tablet')
-      this.numberAnimation = 620
+      this.positionCard++;
+      this.listAd[this.positionCard - 1] = true;
 
     } else {
-      alert('é Desktop Animal!!')
+      return;
 
-    }
-  }
+    };
+
+    this.listAd[this.positionCard] = false;
+
+
+    container.scrollBy({
+      left: cardWidth,
+      behavior: 'smooth'
+    });
+
+
+  };
+
+  onScroll() {
+    const container = this.containerAnimation.nativeElement;
+    let carouselPosition = container.scrollLeft;
+    const widthCard = this.cardAd.nativeElement.offsetWidth;
+
+    let indexCard = Math.round(carouselPosition / (widthCard + 20));
+
+    if (indexCard < 1) {
+      this.listAd[0] = false;
+      this.positionCard = 0;
+
+      this.resetListAd(0);
+
+    } else if (indexCard >= 1 && indexCard < 2) {
+      this.listAd[1] = false;
+      this.positionCard = 1;
+
+      this.resetListAd(1);
+
+    } else if (indexCard >= 2 && indexCard < 3) {
+      this.listAd[2] = false;
+      this.positionCard = 2;
+
+      this.resetListAd(2);
+
+    } else if (indexCard >= 3 && indexCard < 4) {
+      this.listAd[3] = false;
+      this.positionCard = 3;
+
+      this.resetListAd(3);
+
+    } else if (indexCard >= 4 && indexCard < 5) {
+      this.listAd[4] = false;
+      this.positionCard = 4;
+
+      this.resetListAd(4);
+
+    } else if (indexCard >= 5 && indexCard < 6) {
+      this.listAd[5] = false;
+      this.positionCard = 5;
+
+      this.resetListAd(5);
+
+    };
+
+  };
+
+  resetListAd(number: number) {
+    for (let i = 0; i < this.listAd.length; i++) {
+      if (i != number) {
+        this.listAd[i] = true;
+
+      };
+
+    };
+
+  };
 
   ngOnDestroy(): void {
     this.resizeObserver.disconnect();
-  }
+  };
 
 }

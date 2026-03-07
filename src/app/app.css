@@ -163,7 +163,7 @@ h2 {
     width: 100%;
     height: 490px;
     padding-top: 40px;
-    background-image: url(/images/phone-ad.png);
+    background-image: url(/images/phone_ad.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -177,7 +177,7 @@ h2 {
     height: 580px;
     padding-top: 40px;
     margin-top: 10px;
-    background-image: url(/images/pad-ad.png);
+    background-image: url(/images/pad_ad.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -222,7 +222,7 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 540px;
+    height: 550px;
     margin-top: 20px;
     overflow: hidden;
     background: #FFFFFF;
@@ -258,22 +258,31 @@ h2 {
     width: 100%;
     margin: 0;
     top: 49%;
-    padding: 0px 30px;
+    padding: 0px 10px;
 }
 
 .container-sets span {
-    transform: scale(2);
+    transform: scale(1.5);
     color: black;
+    opacity: 0.6;
     z-index: 20;
+    transition: 0.3s ease-in-out;
+}
+
+.container-sets span:active {
+    opacity: 1;
 }
 
 .container-animation {
     display: flex;
     justify-content: start;
-    width: 600dvw;
-    height: 430px;
+    align-items: center;
+    height: 510px;
     gap: 20px;
-    transform: translateX(-320px);
+    padding: 0px 50%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
     transition: 0.7s ease-in-out;
 }
 
@@ -287,6 +296,7 @@ h2 {
     color: white;
     box-shadow: 2px 4px 12px 1px rgba(0, 0, 0, 0.76);
     overflow: hidden;
+    scroll-snap-align: center;
     transition: 0.5s ease-in-out;
 }
 
@@ -442,10 +452,20 @@ footer span:nth-child(4) {
 
     .phone-ad {
         height: 600px;
+        background-image: url(/images/phone_tablet.png);
+        background-position: bottom;
     }
 
     .pad-ad {
         height: 600px;
+        background-image: url(/images/pad_tablet.png);
+        background-position: top;
+    }
+
+    .book-ad {
+        width: calc(50% - 5px);
+        height: 450px;
+        background-position: top;
     }
 
     .watch-ad {
@@ -453,21 +473,215 @@ footer span:nth-child(4) {
         height: 450px;
     }
 
-    .book-ad {
-        width: calc(50% - 5px);
-        height: 450px;
-    }
-
     .ad-carousel {
-        min-width: 600px;
+        min-width: 660px;
     }
 
     .romance {
-        background-image: url(/images/romance-table.png);
+        background-image: url(/images/romance_desktop.png);
     }
 
     .terror {
-        background-position: 0px -190px;
-        background-image: url(/images/terror-tablet.png);
+        background-image: url(/images/terror_desktop.png);
+        background-position: center;
+    }
+
+    .comedy {
+        background-image: url(/images/comedy_desktop.png);
+        background-position: top;
+    }
+
+    .action {
+        background-image: url(/images/action_desktop.png);
+        background-position: top;
+    }
+
+    .drama {
+        background-image: url(/images/drama_desktop.png);
+    }
+
+    .suspense {
+        background-image: url(/images/suspense_desktop.png);
+    }
+}
+
+@media (min-width: 1280px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: start;
+        width: 60%;
+        height: 55px;
+    }
+
+    nav img {
+        width: auto;
+        height: 35px;
+        margin-bottom: 5px;
+    }
+
+    .container-ul {
+        opacity: 1;
+        position: static;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        padding: 0px 20px;
+    }
+
+    .nav-ul {
+        opacity: 1;
+        pointer-events: all;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 55px;
+        gap: 5px;
+    }
+
+    .nav-ul li {
+        align-items: center;
+        width: initial;
+        height: 55px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .container-nav-mob {
+        height: 55px;
+    }
+
+    .button-buy:hover {
+        background-color: var(--color-blue-buttom);
+        color: white;
+    }
+
+    .button-more:hover {
+        background-color: #017cf8;
+    }
+
+    .phone-ad {
+        background-image: url(/images/phone_desktop.png);
+        background-position: bottom;
+    }
+
+    .pad-ad {
+        background-image: url(/images/tablet_desktop.png);
+        background-position: bottom;
+    }
+
+    .book-ad {
+        height: 590px;
+        background-image: url(/images/book_desktop.png);
+        background-position: bottom;
+    }
+
+    .watch-ad {
+        height: 590px;
+        background-image: url(/images/watch_desktop.png);
+        background-position: bottom;
+    }
+
+    .container-carousel {
+        height: 750px;
+    }
+
+    .container-animation {
+        height: 710px;
+    }
+
+    .ad-carousel {
+        min-width: 1050px;
+        height: 570px;
+    }
+
+    .romance {
+        background-image: url(/images/romance_desktop.png);
+    }
+
+    .terror {
+        background-image: url(/images/terror_desktop.png);
+        background-position: center;
+    }
+
+    .comedy {
+        background-image: url(/images/comedy_desktop.png);
+        background-position: top;
+    }
+
+    .action {
+        background-image: url(/images/action_desktop.png);
+        background-position: top;
+    }
+
+    .drama {
+        background-image: url(/images/drama_desktop.png);
+    }
+
+    .suspense {
+        background-image: url(/images/suspense_desktop.png);
+    }
+
+    .container-data {
+        transition: 0.4s ease-in-out;
+    }
+
+    .title-ad {
+        font-weight: 600;
+        font-size: 24px;
+    }
+
+    .description-ad {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .button-ad {
+        width: 120px;
+        height: 37px;
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    .button-ad:hover {
+        background-color: rgba(255, 255, 255, 0.781);
+    }
+
+    .location-ad {
+        height: 50px;
+    }
+
+    .icon-location {
+        transition: 0.4s ease-in-out;
+    }
+
+    footer {
+        align-items: center;
+        font-size: 16px;
+    }
+
+    .promotions-warning {
+        width: 60%;
+        height: 180px;
+        border-bottom-style: solid;
+        border-color: var(--color-icons);
+        border-width: 1px;
+    }
+
+    .promotions-warning p {
+        text-align: start;
+    }
+
+    .address {
+        width: 60%;
+        margin-top: 20px;
+    }
+
+    footer span:nth-child(4) {
+        margin-top: 20px;
+        text-align: center;
     }
 }

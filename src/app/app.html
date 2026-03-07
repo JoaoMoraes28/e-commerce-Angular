@@ -1,8 +1,8 @@
 <header>
   <nav>
     <img src="images/log-main.png" alt="">
-    <div [class.show-list]="modalClose.shoList" class="container-ul">
-      <ul [class.show-ul]="modalClose.shoList" class="nav-ul">
+    <div [class.show-list]="modalClose.showList" class="container-ul">
+      <ul [class.show-ul]="modalClose.showList" class="nav-ul">
         <li>Loja</li>
         <li>Phone</li>
         <li>Pad</li>
@@ -71,12 +71,12 @@
       </div>
     </div>
     <div class="container-sets">
-      <span (click)="changeCarouselLeft()" class="fas fa-chevron-left"></span>
-      <span (click)="changeCarouselRight()" class="fas fa-chevron-right"></span>
+      <span (click)="nextCard('left')" class="fas fa-chevron-left"></span>
+      <span (click)="nextCard('right')" class="fas fa-chevron-right"></span>
     </div>
 
-    <div [style.transform]="" class="container-animation">
-      <div [class.no-focus-ad]="listAd[0]" class="ad-carousel romance">
+    <div #containerAnimation [style.transform]="" (scroll)="onScroll()" class="container-animation">
+      <div #card [class.no-focus-ad]="listAd[0]" class="ad-carousel romance">
         <div [class.show-container-data]="listAd[0]" class="container-data">
           <p class="title-ad">Romance</p>
           <p class="description-ad">Você acredita no amor as cegas?</p>
