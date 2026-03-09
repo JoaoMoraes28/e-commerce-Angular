@@ -1,0 +1,173 @@
+<main>
+
+  <section class="card-ad phone">
+    <h2>Phone 21</h2>
+    <p>Conheça a nova geração do Phone.</p>
+    <div>
+      <a class="button-more" href="/phone-page">Saiba mais</a>
+      <a class="button-buy" href="">Comprar Phone</a>
+    </div>
+    <figure>
+      <picture>
+        <source media="(min-width: 1280px)" srcset="/images/home_ad/phone_desktop.png">
+
+        <source media="(min-width: 768px)" srcset="/images/home_ad/phone_tablet.png">
+
+        <img src="/images/home_ad/phone_ad.png" alt="">
+      </picture>
+    </figure>
+  </section>
+
+  <section class="card-ad pad">
+    <h2>Lume <span>air</span></h2>
+    <p>Agora com a velocidade do chip J21.</p>
+    <div>
+      <a class="button-more" href="">Saiba mais</a>
+      <a class="button-buy" href="">Comprar</a>
+    </div>
+    <figure>
+      <picture>
+        <source media="(min-width: 1280px)" srcset="/images/home_ad/tablet_desktop.png">
+
+        <source media="(min-width: 768px)" srcset="/images/home_ad/pad_tablet.png">
+
+        <img src="/images/home_ad/pad_ad.png" alt="">
+      </picture>
+    </figure>
+  </section>
+
+  <div class="container-ads">
+    <section class="card-ad book">
+      <h2>Book Pro de 21 pol.</h2>
+      <p>Com a potência do J21.</p>
+      <div>
+        <a class="button-more" href="">Saiba mais</a>
+        <a class="button-buy" href="">Comprar</a>
+      </div>
+      <figure>
+        <picture>
+          <source media="(min-width: 1280px)" srcset="/images/home_ad/book_desktop.png">
+
+          <img src="/images/home_ad/book-ad.png" alt="">
+        </picture>
+      </figure>
+    </section>
+
+    <section class="card-ad watch">
+      <h2>WATCH SERIES 21</h2>
+      <p>O companheiro perfeito para monitorar sua saúde.</p>
+      <div>
+        <a class="button-more" href="">Saiba mais</a>
+        <a class="button-buy" href="">Comprar</a>
+      </div>
+      <figure>
+        <picture>
+          <source media="(min-width: 1280px)" srcset="/images/home_ad/watch_desktop.png">
+
+          <img src="/images/home_ad/watch-ad.png" alt="">
+        </picture>
+      </figure>
+    </section>
+
+    <section class="card-ad monitor">
+      <h2>Studio Lume Play</h2>
+      <p>Emoção de cores do começo ao fim.</p>
+      <div>
+        <a class="button-more" href="">Saiba mais</a>
+        <a class="button-buy" href="">Comprar</a>
+      </div>
+      <figure>
+        <picture>
+          <source media="(min-width: 1280px)" srcset="/images/home_ad/monitor_desktop.png">
+
+          <img src="/images/home_ad/monitor-ad.png" alt="">
+        </picture>
+      </figure>
+    </section>
+
+    <section class="card-ad max">
+      <h2>Phone 21 Max</h2>
+      <p>O que era bom ficou ainda melhor.</p>
+      <div>
+        <a class="button-more" href="">Saiba mais</a>
+        <a class="button-buy" href="">Comprar</a>
+      </div>
+      <figure>
+        <img src="/images/home_ad/phone_max_ad.jpg" alt="">
+      </figure>
+    </section>
+  </div>
+
+  <div #containerCarousel class="container-carousel">
+    <div class="container-h2-tv">
+      <div>
+        <img src="/images/log-main.png" alt="">
+        <h2>Lume TV</h2>
+      </div>
+    </div>
+    <div class="container-sets">
+      <span (click)="nextCard('left')" class="fas fa-chevron-left"></span>
+      <span (click)="nextCard('right')" class="fas fa-chevron-right"></span>
+    </div>
+
+    <div #containerAnimation [style.transform]="" (scroll)="onScroll()" class="container-animation">
+      <div #card [class.no-focus-ad]="listAd[0]" class="ad-carousel romance">
+        <div [class.show-container-data]="listAd[0]" class="container-data">
+          <p class="title-ad">Romance</p>
+          <p class="description-ad">Você acredita no amor as cegas?</p>
+          <a class="button-ad" href="">Assita agora</a>
+        </div>
+      </div>
+
+      <div [class.no-focus-ad]="listAd[1]" class="ad-carousel terror">
+        <div [class.show-container-data]="listAd[1]" class="container-data">
+          <p class="title-ad">Terror</p>
+          <p class="description-ad">Será que alguém está a espreita? Ou algo...</p>
+          <a class="button-ad" href="">Assita agora</a>
+        </div>
+      </div>
+
+      <div [class.no-focus-ad]="listAd[2]" class="ad-carousel comedy">
+        <div [class.show-container-data]="listAd[2]" class="container-data">
+          <p class="title-ad">Comédia</p>
+          <p class="description-ad">A terapia agora é em dobro.</p>
+          <a class="button-ad" href="">Assita agora</a>
+        </div>
+      </div>
+
+      <div [class.no-focus-ad]="listAd[3]" class="ad-carousel action">
+        <div [class.show-container-data]="listAd[3]" class="container-data">
+          <p class="title-ad">Ação</p>
+          <p class="description-ad">A lenda volta a vigiar as ruas escuras de sua cidade.</p>
+          <a class="button-ad" href="">Assita agora</a>
+        </div>
+      </div>
+
+      <div [class.no-focus-ad]="listAd[4]" class="ad-carousel drama">
+        <div [class.show-container-data]="listAd[4]" class="container-data">
+          <p class="title-ad">Drama</p>
+          <p class="description-ad">Uma lealdade quase impossível.</p>
+          <a class="button-ad" href="">Assita agora</a>
+        </div>
+      </div>
+
+      <div [class.no-focus-ad]="listAd[5]" class="ad-carousel suspense">
+        <div [class.show-container-data]="listAd[5]" class="container-data">
+          <p class="title-ad">Suspense</p>
+          <p class="description-ad">Acredita mesmo no que está vendo, ou ainda não acordou?.</p>
+          <a class="button-ad" href="">Assita agora</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="location-ad">
+      <div [class.disable-icon-location]="listAd[0]" class="icon-location"></div>
+      <div [class.disable-icon-location]="listAd[1]" class="icon-location"></div>
+      <div [class.disable-icon-location]="listAd[2]" class="icon-location"></div>
+      <div [class.disable-icon-location]="listAd[3]" class="icon-location"></div>
+      <div [class.disable-icon-location]="listAd[4]" class="icon-location"></div>
+      <div [class.disable-icon-location]="listAd[5]" class="icon-location"></div>
+    </div>
+  </div>
+
+</main>

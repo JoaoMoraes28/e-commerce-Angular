@@ -1,0 +1,25 @@
+<header>
+    <nav>
+        <img src="images/log-main.png" alt="">
+        <div [class.show-list]="modalClose.showList" class="container-ul">
+            <ul [class.show-ul]="modalClose.showList" class="nav-ul">
+                <li>Loja</li>
+                <li>Phone</li>
+                <li>Pad</li>
+                <li>Watch</li>
+                <li>TV e Casa</li>
+                <li>Entretenimento</li>
+                <li>Acessórios</li>
+                <li>Suporte</li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-nav-mob">
+        <span class="fas fa-search"></span>
+        <span class="fa fa-shopping-bag"></span>
+        <div (click)="changeListNav()" class="menu-mobile">
+            <div [class.close-rotate-one]="modalClose.closeOne" class="close-one"></div>
+            <div [class.close-rotate-two]="modalClose.closeTwo" class="close-two"></div>
+        </div>
+    </div>
+</header>

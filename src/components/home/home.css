@@ -1,0 +1,420 @@
+main {
+    padding-top: 45px;
+
+}
+
+section div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 2px;
+}
+
+.button-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    color: white;
+    background-color: var(--color-blue-buttom);
+    font-size: 14px;
+}
+
+.button-buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    color: var(--color-blue-buttom);
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--color-blue-buttom);
+}
+
+.card-ad {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 490px;
+    margin-top: 10px;
+}
+
+.card-ad figure {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -10;
+}
+
+.card-ad figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-ad h2 {
+    margin-top: 30px;
+}
+
+.phone {
+    margin-top: 0px;
+}
+
+.phone .button-buy {
+    width: 140px;
+}
+
+.pad span {
+    font-family: "Lobster Two", sans-serif;
+    color: var(--color-blue-buttom);
+}
+
+.book {
+    color: white;
+}
+
+.max {
+    color: white;
+}
+
+.container-carousel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 550px;
+    margin-top: 20px;
+    overflow: hidden;
+    background: #FFFFFF;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(212, 212, 212, 1) 50%, rgba(255, 255, 255, 1) 100%);
+}
+
+.container-h2-tv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+}
+
+.container-h2-tv div {
+    display: flex;
+    align-items: center;
+    width: 190px;
+    gap: 5px;
+}
+
+.container-h2-tv img {
+    width: auto;
+    height: 50px;
+    opacity: 0.7;
+}
+
+.container-sets {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    top: 49%;
+    padding: 0px 10px;
+}
+
+.container-sets span {
+    transform: scale(1.5);
+    color: black;
+    opacity: 0.6;
+    z-index: 20;
+    transition: 0.3s ease-in-out;
+}
+
+.container-sets span:active {
+    opacity: 1;
+}
+
+.container-animation {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 510px;
+    gap: 20px;
+    padding: 0px 50%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    transition: 0.7s ease-in-out;
+}
+
+.ad-carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    min-width: 300px;
+    height: 420px;
+    color: white;
+    box-shadow: 2px 4px 12px 1px rgba(0, 0, 0, 0.76);
+    overflow: hidden;
+    scroll-snap-align: center;
+    transition: 0.5s ease-in-out;
+}
+
+.no-focus-ad {
+    opacity: 0.5;
+}
+
+.romance {
+    color: black;
+    background-image: url(/images/banners_movie/romance-ad.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.terror {
+    background-image: url(/images/banners_movie/terror-ad.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.comedy {
+    background-image: url(/images/banners_movie/comedy-ad.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.action {
+    background-image: url(/images/banners_movie/action-ad.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.drama {
+    background-image: url(/images/banners_movie/drama-ad.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.suspense {
+    background-image: url(/images/banners_movie/suspense-ad.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.438) 0%, rgba(255, 255, 255, 0) 100%);
+    transform: translateY(0px);
+    transition: 0.6s ease-in-out;
+}
+
+.show-container-data {
+    transform: translateY(150px);
+}
+
+.title-ad {
+    font-weight: 600;
+}
+
+.description-ad {
+    width: 100%;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.button-ad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 35px;
+    margin-top: 10px;
+    color: black;
+    background-color: white;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.37);
+}
+
+.location-ad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    gap: 7px;
+}
+
+.icon-location {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: black;
+    transition: 0.6s ease-in-out;
+}
+
+.disable-icon-location {
+    opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+    .container-ads {
+        display: grid;
+        grid-template-columns: 50% 49%;
+        width: 100%;
+        padding: 5px 10px;
+        gap: 10px;
+    }
+
+    .card-ad {
+        height: 550px;
+    }
+
+    .pad figure img {
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .container-ads .card-ad {
+        height: 470px;
+    }
+
+    .ad-carousel {
+        min-width: 660px;
+    }
+
+    .romance {
+        background-image: url(/images/banners_movie/romance_desktop.png);
+    }
+
+    .terror {
+        background-image: url(/images/banners_movie/terror_desktop.png);
+        background-position: center;
+    }
+
+    .comedy {
+        background-image: url(/images/banners_movie/comedy_desktop.png);
+        background-position: top;
+    }
+
+    .action {
+        background-image: url(/images/banners_movie/action_desktop.png);
+        background-position: top;
+    }
+
+    .drama {
+        background-image: url(/images/banners_movie/drama_desktop.png);
+    }
+
+    .suspense {
+        background-image: url(/images/banners_movie/suspense_desktop.png);
+    }
+}
+
+@media (min-width: 1280px) {
+    .button-buy:hover {
+        background-color: var(--color-blue-buttom);
+        color: white;
+    }
+
+    .button-more:hover {
+        background-color: #017cf8;
+    }
+
+    .card-ad {
+        height: 680px;
+    }
+
+    .phone figure img {
+        object-position: bottom;
+    }
+
+    .pad figure img {
+        object-position: bottom;
+    }
+
+    .container-ads .card-ad {
+        height: 550px;
+    }
+
+    .monitor figure {
+        overflow: hidden;
+    }
+
+    .monitor figure img {
+        object-position: bottom;    
+    }
+
+    .container-carousel {
+        height: 750px;
+    }
+
+    .container-animation {
+        height: 710px;
+    }
+
+    .ad-carousel {
+        min-width: 1050px;
+        height: 570px;
+    }
+
+    .container-data {
+        transition: 0.4s ease-in-out;
+    }
+
+    .title-ad {
+        font-weight: 600;
+        font-size: 24px;
+    }
+
+    .description-ad {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .button-ad {
+        width: 120px;
+        height: 37px;
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    .button-ad:hover {
+        background-color: rgba(255, 255, 255, 0.781);
+    }
+
+    .location-ad {
+        height: 50px;
+    }
+
+    .icon-location {
+        transition: 0.4s ease-in-out;
+    }
+}

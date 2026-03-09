@@ -1,0 +1,287 @@
+main {
+    padding-top: 45px;
+}
+
+.banner-phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 820px;
+    gap: 20px;
+    padding-top: 100px;
+    background-color: #F1F0F2;
+}
+
+.title-phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+.title-phone span:nth-child(2) {
+    text-wrap: wrap;
+    font-weight: 600;
+    font-size: 40px;
+    background: #2A7B9B;
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 89%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title-phone span:nth-child(3) {
+    text-wrap: wrap;
+    font-weight: 600;
+    font-size: 40px;
+    background: #57C785;
+    background: linear-gradient(180deg, rgba(87, 199, 133, 1) 26%, rgba(237, 221, 83, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.prices {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 130px;
+}
+
+.see-prices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    color: white;
+    background-color: var(--color-blue-buttom);
+    font-size: 14px;
+}
+
+.prices p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.banner-phone figure {
+    width: 100%;
+    height: 430px;
+    overflow: hidden;
+}
+
+.banner-phone figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-phone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    height: 750px;
+    background-color: #F1F0F2;
+    background: linear-gradient(90deg, rgba(241, 240, 242, 1) 50%, rgba(255, 255, 255, 1) 100%);
+}
+
+.carousel-phone h2 {
+    font-size: 28px;
+    font-weight: 600;
+    width: 200px;
+    opacity: 0.9;
+    margin-left: 40px;
+}
+
+.carousel {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    padding: 0px 50%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    min-width: 330px;
+    height: 420px;
+    padding-top: 30px;
+    border-radius: 30px;
+    scroll-snap-align: center;
+    background-color: white;
+}
+
+.card p {
+    width: 87%;
+    height: 100px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.gallery-1 {
+    background-image: url(/images/phone_page/phone21_desktop.png);
+    background-repeat: no-repeat;
+    background-size: 360%;
+    background-position: 28% 80%;
+}
+
+.gallery-2 {
+    background-image: url(/images/phone_page/charge_phone.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50px;
+}
+
+.gallery-3 {
+    background-image: url(/images/phone_page/cam_phone.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery-3 p {
+    color: rgba(255, 255, 255, 0.705);
+
+}
+
+.gallery-4 {
+    background-image: url(/images/phone_page/storage_phone.png);
+    background-repeat: no-repeat;
+    background-size: 105%;
+    background-position: 50% 60%;
+}
+
+.gallery-5 {
+    background-image: url(/images/phone_page/lumy_ia.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 60%;
+}
+
+.gallery-5 span {
+    font-weight: 600;
+    background: #FC466B;
+    background: linear-gradient(90deg, rgba(252, 70, 107, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.location-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 50px;
+}
+
+.position {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 200px;
+    height: 90%;
+    border-radius: 30px;
+    background-color: rgba(128, 128, 128, 0.253);
+}
+
+.circle-position {
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    border-radius: 100%;
+    opacity: 0.5;
+}
+
+.focus-position {
+    width: 40px;
+    border-radius: 5px;
+}
+
+.player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background-color: rgba(128, 128, 128, 0.253);
+}
+
+.fa-play {
+    transform: scale(1.2);
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 860px;
+    padding-top: 70px;
+}
+
+.presentation .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: calc(100% - 380px);
+    padding: 0px 50px;
+}
+
+.presentation h2 {
+    width: 250px;
+    font-size: 18px;
+}
+
+.presentation h3 {
+    font-size: 32px;
+    font-weight: 600;
+    background: #2A7B9B;
+    background: linear-gradient(180deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.presentation p {
+    font-size: 16px;
+    color: gray;
+    line-height: 29px;
+}
+
+.presentation span {
+    color: black;
+    font-weight: 600;
+}
+
+.presentation figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.presentation figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
