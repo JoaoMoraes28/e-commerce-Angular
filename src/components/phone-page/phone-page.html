@@ -16,8 +16,8 @@
     </div>
     <section class="carousel-phone">
         <h2>Começe pelos destaques.</h2>
-        <ul class="carousel">
-            <li class="card gallery-1">
+        <ul #carouselCard (scroll)="onScrollCarousel()" class="carousel">
+            <li #cardPhone class="card gallery-1">
                 <p>Feito para ficar ao seu lado. Metal Shield 4 frontal com 5x mais resistência a arranhões.</p>
             </li>
             <li class="card gallery-2">
@@ -35,24 +35,30 @@
         </ul>
         <div class="location-carousel">
             <div class="position">
-                <div class="circle-position"></div>
-                <div class="circle-position"></div>
-                <div class="circle-position"></div>
-                <div class="circle-position"></div>
-                <div class="circle-position"></div>
+                <div #firstPosition id="one" (click)="changeCard(firstPosition)"
+                    [class.focus-position]="validationPosition === 'one'" class="circle-position"></div>
+                <div #secondPosition id="two" (click)="changeCard(secondPosition)"
+                    [class.focus-position]="validationPosition === 'two'" class="circle-position"></div>
+                <div #thirdPosition id="three" (click)="changeCard(thirdPosition)"
+                    [class.focus-position]="validationPosition === 'three'" class="circle-position"></div>
+                <div #fourthPosition id="four" (click)="changeCard(fourthPosition)"
+                    [class.focus-position]="validationPosition === 'four'" class="circle-position"></div>
+                <div #fifthPosition id="five" (click)="changeCard(fifthPosition)"
+                    [class.focus-position]="validationPosition === 'five'" class="circle-position"></div>
             </div>
-            <div class="player">
-                <span class="fa-solid fa-play"></span>
-            </div>
+            <button (click)="autoCarousel()" class="player">
+                <span [class.fa-pause]="carouselClicked" class="fa-solid fa-play"></span>
+            </button>
         </div>
     </section>
     <section class="presentation">
         <div class="text">
-            <h2>Incrível desde sua escolha</h2>
+            <h2>Incrível em todos os aspectos</h2>
             <h3>Perfeito até nos <br> mínimos detalhes</h3>
-            <p>O Phone 21 lhe apresenta vários <span>recursos geniais presentes na nova linha da Lume</span>, abrindo um mar
-                de possiblidades. Graças a resistência Metal Shield 4, Chip J21 de ultíssima geração, câmera Lumesion 42MP,
-                recarga rápida wireless, armazenamento de 512Gb até 3TB. É Lume. É ideal.
+            <p>O Phone 21 lhe apresenta vários <span>recursos geniais presentes em nosso novo sistema operacional</span>, abrindo um
+                mar de possiblidades. É <span>Lume</span>. Graças a resistência Metal Shield 4, Chip J21 de ultíssima
+                geração, armazenamento de 512Gb até 3TB, câmera Lumesion 42MP e
+                recarga rápida wireless. É a <span>melhor</span> escolha.
             </p>
         </div>
         <figure>
