@@ -11,7 +11,11 @@
             <p>Pré-venda a partir de 16/06</p>
         </div>
         <figure>
-            <img src="/images/phone_page/phone21_mobile.png" alt="">
+            <picture>
+                <source media="(min-width: 768px)" srcset="/images/phone_page/phone21_desktop.png">
+
+                <img src="/images/phone_page/phone21_mobile.png" alt="">
+            </picture>
         </figure>
     </div>
     <section class="carousel-phone">
@@ -19,18 +23,53 @@
         <ul #carouselCard (scroll)="onScrollCarousel()" class="carousel">
             <li #cardPhone class="card gallery-1">
                 <p>Feito para ficar ao seu lado. Metal Shield 4 frontal com 5x mais resistência a arranhões.</p>
+                <figure>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="/images/phone_page/phone21_mobile.png">
+
+                        <img src="/images/phone_page/phone21_desktop.png" alt="">
+                    </picture>
+                </figure>
             </li>
             <li class="card gallery-2">
                 <p>Bateria altamente durável. Recarga rápida com o novo USB-C21 e com o SafeCharge.</p>
+                <figure>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="">
+
+                        <img src="/images/phone_page/charge_phone.png" alt="">
+                    </picture>
+                </figure>
             </li>
             <li class="card gallery-3">
-                <p>Câmera Lumesion de 42MP. Com New Generation de frames para vídeos ainda mais nítidos.</p>
+                <p>Câmera Lumesion de 42MP. Com New Generation de frames para vídeos ainda mais nítidos. Aproveite a nova linha de filtros.</p>
+                <figure>
+                    <picture>
+                        <source media="(min-width: 1280px)" srcset="/images/phone_page/cam_phone_desktop.png">
+
+                        <img src="/images/phone_page/cam_phone.png" alt="">
+                    </picture>
+                </figure>
             </li>
             <li class="card gallery-4">
                 <p>Armazenamento a partir de 512 GB. Podendo ir até 3 TB.</p>
+                <figure>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="">
+
+                        <img src="/images/phone_page/storage_phone.png" alt="">
+                    </picture>
+                </figure>
             </li>
             <li class="card gallery-5">
                 <p>LumY 21 e <span>Lume AI</span>. Simples e úteis em sua rotina</p>
+                <figure>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="">
+
+                        <img src="/images/phone_page/lumy_ia.png" alt="">
+                    </picture>
+                </figure>
             </li>
         </ul>
         <div class="location-carousel">
@@ -55,14 +94,107 @@
         <div class="text">
             <h2>Incrível em todos os aspectos</h2>
             <h3>Perfeito até nos <br> mínimos detalhes</h3>
-            <p>O Phone 21 lhe apresenta vários <span>recursos geniais presentes em nosso novo sistema operacional</span>, abrindo um
+            <p>O Phone 21 lhe apresenta vários <span>recursos geniais presentes em nosso novo sistema
+                    operacional</span>, abrindo um
                 mar de possiblidades. É <span>Lume</span>. Graças a resistência Metal Shield 4, Chip J21 de ultíssima
                 geração, armazenamento de 512Gb até 3TB, câmera Lumesion 42MP e
                 recarga rápida wireless. É a <span>melhor</span> escolha.
             </p>
         </div>
         <figure>
-            <img src="/images/phone_page/presentation_phone.jpg" alt="">
+            <img src="/images/phone_page/presentation_phone.png" alt="">
         </figure>
+    </section>
+    <section class="design">
+        <h2>Design resitente</h2>
+        <h3>Projetado para exibir e durar muito.</h3>
+        <figure>
+            <img src="/images/phone_page/phone_shield.png" alt="">
+        </figure>
+        <div class="container-description-shield">
+            <p class="description-design">
+                O Phone 21 é elegante e valente, com estrutura robusta de ligas de alumínio, <span>Metal Shield 4</span>
+                em
+                seu Front e 5x
+                mas resistência a arranhões que seu antecessor. Com mais proteção que qualquer vidro de smartphone, você
+                não
+                precisa se preocupar se seu Phone cair, ou escorregar para o chão. Ele também conta com
+                <span>USB-C21</span>
+                para uma recarga de altíssima qualidade e velocidade.
+            </p>
+            <div class="title-shield">
+                <img class="img-shield" src="/images/phone_page/metal_shield.png" alt="">
+                <h4>5x mais resistência a <br> arranhões <br></h4>
+                <span>com Metal Shield 4</span>
+            </div>
+        </div>
+        <div class="container-carousel-attibutes">
+            <ul #carouselAttribute (scroll)="onScrollCarouselAtribute()" class="gallery-attributes">
+                <li #cardAttribute>
+                    <figure>
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="/images/phone_page/phone_card_desktop.png">
+
+                            <img src="/images/phone_page/charge_card.png" alt="">
+                        </picture>
+                    </figure>
+                    <p>
+                        <span>Agora com SafeCharge</span>. O Phone 21 tem recarga wireless de até 14W, quase o dobro da
+                        potência do
+                        Phone20. Quando precisar recarregar, irá notar a simplicidade, velocidade e praticidade. E com a
+                        nova linha de imãs integrados, a conexão ficou muito mais fácil com carregadores e outros
+                        acessórios da linha 21Ly.
+                    </p>
+                </li>
+                <li>
+                    <figure>
+                        <img src="/images/phone_page/cam_montain.png" alt="">
+                    </figure>
+                    <p>
+                        <span>Tela radiante.</span> Na tela Hyper Retina DXR de 7,9 polegadas, as cores e seus tons
+                        deixam as fotos e
+                        vídeos ainda mais vívidos, além de aumentar a nitidez de textos, facilitando sua leitura. Com o
+                        novo revestimento antireflexo o brilho de ambientes claros é reduzido, aumentando sua
+                        visibilidade.
+                    </p>
+                </li>
+                <li>
+                    <figure>
+                        <img src="/images/phone_page/faceId.png" alt="">
+                    </figure>
+                    <p>
+                        <span>Face ID</span>. Use o FaceId para desbloquear o Lume21, acessar aplicativos e realizar
+                        pagamentos
+                        somente com um olhar.
+                    </p>
+                </li>
+                <li>
+                    <figure>
+                        <img src="./images/phone_page/phones_colors.png" alt="">
+                    </figure>
+                    <p>
+                        <span>Cores</span>. O Phone21 vem em quatro lindas cores. Escolha entre os clássicos preto e
+                        branco, o ousado
+                        preto com prateado, ou a nova e suave cor Turquesa Celeste, cheia de autenticidade.
+                    </p>
+                </li>
+            </ul>
+            <div class="pass-carousel-attributes">
+                <button [class.limit-pass-carousel]="carouselDisableLeft" (click)="changeCardAttribute('left')"><span
+                        class="fas fa-chevron-left"></span></button>
+                <button [class.limit-pass-carousel]="carouselDisableRight" (click)="changeCardAttribute('right')"><span
+                        class="fas fa-chevron-right"></span></button>
+            </div>
+            <!-- <div class="containerChart">
+                <canvas 
+                    baseChart
+                    [data]="barChartData"
+                    [options]="barCharOptions"
+                    [type]="barChartType"
+                    [legend]="barChartLegend"
+                    >
+                </canvas>
+            </div> -->
+        </div>
     </section>
 </main>

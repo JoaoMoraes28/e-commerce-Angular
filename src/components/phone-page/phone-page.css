@@ -90,8 +90,8 @@ h1 {
     gap: 30px;
     width: 100%;
     height: 750px;
-    background-color: #F1F0F2;
-    background: linear-gradient(90deg, rgba(241, 240, 242, 1) 50%, rgba(255, 255, 255, 1) 100%);
+    background: #F1F0F2;
+    background: linear-gradient(180deg, rgba(241, 240, 242, 1) 0%, rgba(199, 199, 199, 1) 100%);
 }
 
 .carousel-phone h2 {
@@ -113,62 +113,72 @@ h1 {
 }
 
 .card {
+    position: relative;
     display: flex;
     justify-content: center;
     min-width: 330px;
     height: 420px;
-    padding-top: 30px;
     border-radius: 30px;
     scroll-snap-align: center;
     background-color: white;
+    z-index: 10;
 }
 
 .card p {
     width: 87%;
-    height: 100px;
+    height: 120px;
+    padding-top: 30px;
     text-align: center;
     font-weight: 500;
     line-height: 25px;
 }
 
-.gallery-1 {
-    background-image: url(/images/phone_page/phone21_desktop.png);
-    background-repeat: no-repeat;
-    background-size: 360%;
-    background-position: 28% 80%;
+.card figure {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: -10;
 }
 
-.gallery-2 {
-    background-image: url(/images/phone_page/charge_phone.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50px;
+.gallery-1 figure img {
+    width: 100%;
+    height: 50%;
+    transform: scale(2.5);
+    object-position: 50px 10px;
+    object-fit: cover;
 }
 
-.gallery-3 {
-    background-image: url(/images/phone_page/cam_phone.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+.gallery-2 figure img {
+    width: 100%;
+    height: 100%;
+    transform: scale(2);
+    object-position: 5px 30px;
+}
+
+.gallery-3 figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .gallery-3 p {
     color: rgba(255, 255, 255, 0.705);
-
 }
 
-.gallery-4 {
-    background-image: url(/images/phone_page/storage_phone.png);
-    background-repeat: no-repeat;
-    background-size: 105%;
-    background-position: 50% 60%;
+.gallery-4 figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-.gallery-5 {
-    background-image: url(/images/phone_page/lumy_ia.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 50% 60%;
+.gallery-5 figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .gallery-5 span {
@@ -238,6 +248,7 @@ h1 {
     width: 100%;
     height: 860px;
     padding-top: 70px;
+    background-color: rgba(230, 230, 230, 0.534);
 }
 
 .presentation .text {
@@ -267,6 +278,7 @@ h1 {
 .presentation p {
     font-size: 16px;
     color: gray;
+    font-weight: 500;
     line-height: 29px;
 }
 
@@ -308,4 +320,510 @@ h1 {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 52% 0px;
+}
+
+.design {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 1935px;
+    padding-top: 50px;
+}
+
+.design h2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    padding: 0px 50px;
+}
+
+.design h3 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    font-size: 28px;
+    padding: 0px 50px;
+    background: #2A7B9B;
+    background: linear-gradient(180deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.design figure {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.design figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: -14% 100%;
+}
+
+.container-description-shield {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 525px;
+}
+
+.description-design {
+    width: 100%;
+    height: 300px;
+    font-size: 16px;
+    color: gray;
+    font-weight: 500;
+    line-height: 29px;
+    padding: 0px 50px;
+}
+
+.design p span {
+    color: black;
+}
+
+.img-shield {
+    width: 40px;
+    height: auto;
+}
+
+.title-shield {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 160px;
+    gap: 10px;
+    margin-top: 50px;
+    padding: 0px 50px;
+}
+
+.design h4 {
+    background: #2A7B9B;
+    background: linear-gradient(180deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.title-shield span {
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+}
+
+.container-carousel-attibutes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 830px;
+    padding-top: 40px;
+}
+
+.gallery-attributes {
+    display: flex;
+    gap: 20px;
+    height: 590px;
+    padding: 0px 10%;
+    margin-top: 30px;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.gallery-attributes li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+    min-height: 550px;
+    scroll-snap-align: center;
+}
+
+.gallery-attributes li p {
+    width: 90%;
+    height: calc(100% - 350px);
+    font-size: 16px;
+    color: gray;
+    line-height: 23px;
+    padding-top: 15px;
+}
+
+.gallery-attributes li figure {
+    background-color: rgb(233, 233, 233);
+    border-radius: 40px;
+    width: 100%;
+    height: 350px;
+}
+
+.gallery-attributes li:nth-child(1) figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.gallery-attributes li:nth-child(2) figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: -20px 0px;
+}
+
+.gallery-attributes li:nth-child(3) figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0px 0px;
+}
+
+.gallery-attributes li:nth-child(4) figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: -20px 30px;
+}
+
+.pass-carousel-attributes {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    gap: 30px;
+    padding-right: 10%;
+    margin-top: 10px;
+}
+
+.pass-carousel-attributes button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(219, 219, 219);
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    transition: 0.1s ease-in-out;
+}
+
+.pass-carousel-attributes button span {
+    color: rgb(66, 66, 66);
+}
+
+.limit-pass-carousel {
+    opacity: 0.5;
+}
+
+.containerChart {
+    width: 100%;
+    height: 500px;
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.562);
+}
+
+canvas {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .banner-phone {
+        position: relative;
+        justify-content: space-around;
+        z-index: 10;
+    }
+
+    .banner-phone figure {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        padding-bottom: 40px;
+        width: 100%;
+        height: 100%;
+        z-index: -10;
+    }
+
+    .banner-phone figure img {
+        width: 100%;
+        height: 50%;
+        transform: scale(1.5);
+        object-fit: cover;
+    }
+
+    .carousel-phone {
+        height: 840px;
+    }
+
+    .carousel-phone h2 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .card {
+        min-width: 700px;
+        height: 650px;
+    }
+
+    .card p {
+        font-size: 28px;
+        padding-top: 55px;
+        line-height: 32px;
+    }
+
+    .gallery-1 figure {
+        justify-content: center;
+        align-items: end;
+        margin-top: 4px;
+    }
+
+    .gallery-1 figure img {
+        width: 100%;
+        transform: scale(1);
+        object-position: 10px 0px;
+        object-fit: cover;
+    }
+
+    .gallery-2 figure img {
+        width: 100%;
+        transform: scale(1.5);
+        object-position: 10px 50px;
+        object-fit: cover;
+    }
+
+    .gallery-4 figure {
+        padding-top: 60px;
+    }
+
+    .gallery-5 figure {
+        padding-top: 20px;
+    }
+
+    .gallery-5 figure img {
+        transform: scale(0.8);
+    }
+
+    .presentation .text {
+        align-items: center;
+        padding: 0px;
+        height: calc(100% - 460px);
+    }
+
+    .presentation .text p {
+        width: 75%;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .presentation h3 {
+        text-align: center;
+    }
+
+    .presentation figure {
+        height: 450px;
+    }
+
+    .design h2 {
+        justify-content: center;
+    }
+
+    .design h3 {
+        height: 90px;
+        font-size: 32px;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .design figure img {
+        object-fit: contain;
+        transform: scale(0.9);
+        object-position: center;
+    }
+
+    .description-design {
+        padding: 40px 0px;
+        margin-left: 120px;
+        font-size: 18px;
+        width: 60%;
+    }
+
+    .title-shield {
+        padding-left: 120px;
+    }
+
+    .gallery-attributes li {
+        min-width: 700px;
+        height: 500px;
+    }
+
+    .gallery-attributes li figure {
+        height: 420px;
+    }
+
+    .gallery-attributes li p {
+        height: calc(100% - 420px);
+    }
+
+    .gallery-attributes li:nth-child(1) figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(0.9);
+        object-position: 0px -300px;
+        margin-top: 20px;
+    }
+
+    .gallery-attributes li:nth-child(2) figure img {
+        object-position: 0px 0px;
+        transform: scale(1.1);
+    }
+
+    .gallery-attributes li:nth-child(3) figure img {
+        object-fit: contain;
+        object-position: center;
+        transform: scale(1.1);
+    }
+
+    .gallery-attributes li:nth-child(4) figure img {
+        transform: scale(1.1);
+        object-position: 0px 0px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .banner-phone {
+        padding: 0px;
+        justify-content: space-around;
+    }
+
+    .banner-phone figure {
+        justify-content: center;
+        padding-bottom: 90px;
+    }
+
+    .card {
+        justify-content: start;
+        min-width: 1200px;
+    }
+
+    .card p {
+        display: flex;
+        align-items: center;
+        width: 35%;
+        height: 100%;
+        padding-left: 30px;
+    }
+
+    .carousel {
+        overflow: hidden;
+    }
+
+    .gallery-1 figure {
+        justify-content: end;
+    }
+
+    .gallery-1 figure img {
+        transform: scale(1.3);
+        object-position: -60px 0px;
+    }
+
+    .gallery-2 figure {
+        justify-content: end;
+    }
+
+    .gallery-2 figure img {
+        transform: scale(1);
+        object-position: 250px 20px;
+    }
+
+    .gallery-3 p {
+        align-items: start;
+    }
+
+    .gallery-4 p {
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+    }
+
+    .gallery-4 figure {
+        justify-content: end;
+    }
+
+    .gallery-4 figure img {
+        transform: scale(0.7);
+        object-position: 0px 0px;
+    }
+
+    .gallery-5 p {
+        background-color: orange;
+    }
+
+    .gallery-5 span {
+        background-color: red;
+    }
+
+    .gallery-5 figure {
+        justify-content: end;
+    }
+
+    .gallery-5 figure img {
+        margin-left: 170px;
+        transform: scale(0.7);
+        object-position: 0px -50px;
+    }
+
+    .design {
+        height: 2135px;
+    }
+
+    .design figure {
+        height: 600px;
+    }
+
+    .design figure img {
+        transform: scale(1);
+    }
+
+    .container-description-shield {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 15% 35% 35% 15%;
+        width: 100%;
+        height: 525px;
+    }
+
+    .description-design {
+        grid-column: 2 / span 1;
+        margin-left: 0px;
+        width: 100%;
+        height: 100%;
+        font-size: 21px;
+        line-height: 34px;
+    }
+
+    .title-shield {
+        grid-column: 3 / span 1;
+        height: 210px;
+    }
+
+    .img-shield {
+        width: 50px;
+    }
+
+    .title-shield h4 {
+        font-size: 36px
+    }
+
+    .title-shield span {
+        font-size: 18px;
+    }
 }

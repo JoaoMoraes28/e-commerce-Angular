@@ -27,7 +27,8 @@ export class Home {
 
   nextCard(direction: 'left' | 'right') {
     const container = this.containerAnimation.nativeElement;
-    let cardWidth = this.cardAd.nativeElement.offsetWidth;
+    const card = this.cardAd.nativeElement;
+    let cardWidth = card.offsetWidth
 
 
     if (direction === 'left' && this.positionCard > 0) {
@@ -60,7 +61,8 @@ export class Home {
   onScroll() {
     const container = this.containerAnimation.nativeElement;
     let carouselPosition = container.scrollLeft;
-    const widthCard = this.cardAd.nativeElement.offsetWidth;
+    const card = this.cardAd.nativeElement;
+    let widthCard = card.offsetWidth
 
     let indexCard = Math.round(carouselPosition / (widthCard + 20));
 
