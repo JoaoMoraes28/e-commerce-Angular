@@ -5,10 +5,12 @@ import { Home } from '../components/home/home';
 export const routes: Routes = [
     {
         path: "",
-        component: Home
+        component: Home,
+        title: "Lume"
     },
     {
         path: "phone-page",
-        component: PhonePage
+        component: PhonePage,
+        title: "Phone21"
     }
 ];
